@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-07-23T20:02:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Venda" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95066618-9952-4f80-b821-f3b0c53f5a48">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="JASPER_PRODUTOS" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome_cliente" class="java.lang.String"/>
+	<field name="telefone_cliente" class="java.lang.String"/>
+	<field name="cpf_cliente" class="java.lang.String"/>
+	<field name="endereco_cliente" class="java.lang.String"/>
+	<field name="data_hora_venda" class="java.util.Date"/>
+	<field name="forma_pagamento" class="java.lang.String"/>
+	<field name="produtos" class="java.lang.Object"/>
+	<field name="valor_total" class="java.lang.Double"/>
+	<field name="total_itens" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="370" height="50" uuid="1c974137-1503-4f44-91fc-d4aa67d54889"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="41"/>
+				</textElement>
+				<text><![CDATA[Detalhes da Venda]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" isPrintWhenDetailOverflows="true" uuid="8932670b-a070-4c09-aad1-d1523bde54d9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="200" height="20" uuid="91dff083-1bbb-4d9d-991d-955186800bb1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="80" height="20" isPrintWhenDetailOverflows="true" uuid="a9849bb2-9fbb-4c7d-a9f4-6e787ff579d2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="20" width="470" height="20" uuid="3cd6f7eb-427a-41a2-a2ec-e9bc34c15b8a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="0" width="40" height="20" isPrintWhenDetailOverflows="true" uuid="ddbe5ddf-7290-43a9-bb1b-deb64a835e95"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="0" width="90" height="20" uuid="efb04761-67b4-4993-baf7-6f1bd60cf02c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="0" width="70" height="20" isPrintWhenDetailOverflows="true" uuid="09eee0bc-8d2f-4969-a21e-ff8ee982fb9a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="0" width="70" height="20" uuid="85749aa9-ab47-4b3c-a665-205bf63959e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefone_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="120" height="20" isPrintWhenDetailOverflows="true" uuid="c7c93128-2cbe-4efa-a108-27d85a90fabb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Data/Hora da Venda:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="40" width="100" height="20" uuid="4ae8f6a5-ecac-4d64-9ca5-4b44b9e438c3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format($F{data_hora_venda})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="40" width="90" height="20" isPrintWhenDetailOverflows="true" uuid="85ce201d-2f6c-4f90-9912-3482699bec09"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Forma do Pgto.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="40" width="100" height="20" uuid="4aabd90c-9d00-4e06-9c0a-e7446300e758"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{forma_pagamento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="40" width="70" height="20" isPrintWhenDetailOverflows="true" uuid="eb1b8974-2a24-4d63-a6ed-988cd63d5710"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Vlr Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="40" width="70" height="20" isPrintWhenDetailOverflows="true" uuid="f1153c8d-e837-455f-bf00-523f2db8ac8b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["R$ " + $F{valor_total}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="550" height="30" uuid="b9a5ebae-6211-433e-816a-3a7695a1dba9"/>
+				<dataSourceExpression><![CDATA[$F{produtos}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{JASPER_PRODUTOS}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="360" y="0" width="120" height="20" isPrintWhenDetailOverflows="true" uuid="1694d5be-bfd4-46a0-83b6-7f0e3b115565"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName=""/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Total de Produtos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="490" y="0" width="60" height="20" uuid="705d4604-5412-4c16-81ca-7eb71ec3a714"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_itens}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="380" y="0" width="170" height="30" uuid="0e8f52ec-4528-4b88-8bd4-475f37f6355c"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Obrigado e volte sempre!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
